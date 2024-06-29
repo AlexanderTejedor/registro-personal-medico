@@ -1,3 +1,12 @@
+/*Variables para los colores*/
+:root{
+    /* color */
+    --background-color: #eff0f3;
+    --white-color: #FFFFFF;
+    --orange-color: #2675dc;
+    --pink-color: #d9376e;
+    --blue-dark-color: #0d0d0d;
+}
 *{
     margin: 0;
     padding: 0;
@@ -7,28 +16,37 @@
 body{
     width: 100%;
     height: 100vh;
+    background-color: var(--background-color);
     display: flex;
+    color: var(--blue-dark-color);
     justify-content: center;
-    align-items: center;
+    align-items: center; /*Hay que poner start para evitar el error*/
+}
+.body-container{
+    min-width: 500px;
+    border: 12px solid #fff;
+    border-radius: 16px;
+    background-color: var(--blue-light-color);
 }
 .container{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 15px;
 }
 .container h1{
-    font-size: 25px;
+    font-size: 30px;
+    margin-bottom: 30px;
 } 
 .container form{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
+    justify-content: start;
 }
 .form-content{
     display: flex;
+    height: 260px;
     gap: 20px;
 }
 .container form > legend{
@@ -38,4 +56,50 @@ body{
 }
 .delete-message{
     margin-bottom: 20px;
+}
+.personal-register{
+    height: 200px;
+}
+#button-employee,
+#button-add-date-time{
+    height: 40px;
+    font-weight: 600;
+    border: none;
+    color: var(--white-color);
+    border-radius: 5px;
+    background-color: var(--orange-color);
+}
+#button-employee:hover,
+#button-add-date-time:hover{
+    background-color: #1158b5;
+    color: var(--white-color);
+}
+.personal-register input,
+.time-register input,
+#select-employee{
+    height: 30px;
+    margin-bottom: 8px;
+    border: none;
+    border-radius: 4px;
+    text-align: center;
+    outline: none;
+}
+.personal-register input:focus,
+.time-register input:focus{
+    border: 2px solid var(--orange-color);
+}
+.time-register input{
+    margin-bottom: 8px;
+}
+#employee-table{
+    margin-bottom: 20px;
+}
+#employee-table caption,
+#date-time-table caption{
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+#employee-table thead{
+    border: 1px solid var(--orange-color);
 }

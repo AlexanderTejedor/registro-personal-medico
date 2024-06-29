@@ -10,45 +10,77 @@
     <title>Registro Ing-Sal Hospital</title>
   </head>
   <body>
-    <div class="container">
-      <h1>Registro Personal Médico</h1>
-      <!-- Formulario para registrar personal médico -->
-      <div class="form-content">
-        <form class="personal-register">
-          <legend>Registro Personal</legend>
-          <input
-            type="text"
-            id="username"
-            name="username"
-            placeholder="Nombre del empleado"
-          />
-          <input
-            type="text"
-            id="lastname"
-            name="lastname"
-            placeholder="Apellido del empleado"
-          />
-          <input
-            type="text"
-            id="occupation"
-            name="occupation"
-            placeholder="Cargo"
-          />
-          <div id="employee-message"></div>
-          <button type="button" id="button-employee">Agregar empleado</button>
-        </form>
-        <!-- Formulario para registrar fecha y hora de ingresos y salidas del personal -->
-        <form>
-          <legend>Registro Ingreso/Salida</legend>
-          <select id="select-employee" name="select-employee"></select>
-          <label for="date-time-entry">Fecha y hora de ingreso</label>
-          <input type="datetime-local" id="date-time-entry" name="ingreso"/>
-          <label for="date-time-exit">Fecha y hora de salida</label>
-          <input type="datetime-local" id="date-time-exit" name="salida" />
+    <div class="body-container">
+      <div class="container">
+        <h1>Registro Personal Médico</h1>
+        <!-- Formulario para registrar personal médico -->
+        <div class="form-content">
+          <form class="personal-register">
+            <legend>Registro Personal</legend>
+            <input
+              type="text"
+              id="username"
+              name="username"
+              placeholder="Nombre del empleado"
+            />
+            <input
+              type="text"
+              id="lastname"
+              name="lastname"
+              placeholder="Apellido del empleado"
+            />
+            <input
+              type="text"
+              id="occupation"
+              name="occupation"
+              placeholder="Cargo"
+            />
+            <div id="employee-message"></div>
+            <button type="button" id="button-employee">Agregar empleado</button>
+          </form>
+          <!-- Formulario para registrar fecha y hora de ingresos y salidas del personal -->
+          <form class="time-register">
+            <legend>Registro Ingreso/Salida</legend>
+            <select id="select-employee" name="select-employee"></select>
+            <label for="date-time-entry">Fecha y hora de ingreso</label>
+            <input type="datetime-local" id="date-time-entry" name="ingreso"/>
+            <label for="date-time-exit">Fecha y hora de salida</label>
+            <input type="datetime-local" id="date-time-exit" name="salida" />
+    
+            <div id="date-time-message"></div>
+            <button type="button" id="button-add-date-time">Agregar Fecha</button>
+          </form>
+        </div>
+        <!-- Tablas para mostrar todos los datos -->
+        <table id="employee-table">
+          <caption>
+            Personal médico
+          </caption>
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Apellido</th>
+              <th>Cargo</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
   
-          <div id="date-time-message"></div>
-          <button type="button" id="button-add-date-time">Agregar Fecha</button>
-        </form>
+        <div id="delete-message"></div>
+  
+        <table id="date-time-table">
+          <caption>
+            Fecha y hora de ingresos y salidas
+          </caption>
+          <thead>
+            <tr>
+              <th>Empleado</th>
+              <th>Fecha y hora de ingreso</th>
+              <th>Fecha y hora de salida</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
       </div>
       <!-- Tablas para mostrar todos los datos -->
       <table id="employee-table">
